@@ -7,7 +7,10 @@ let map;
 
 async function init() {
     const custom = await import("./custom-style.json");
+    const tracts = await import("../data/source_files/Census2000_Tracts_SF.json");
     const style = map.getStyle();
+
+
 
     style.sources = {
         ...style.sources,
@@ -15,6 +18,8 @@ async function init() {
     };
     style.layers.push(...custom.layers);
     map.setStyle(style);
+
+    map.getSource("tracts").setData(tracts)
 }
 
 mapboxgl.accessToken = settings.accessToken;

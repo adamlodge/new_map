@@ -1,5 +1,10 @@
 {
     "container": "map",
     "accessToken": "pk.eyJ1IjoiYWRhbWxvZGdlIiwiYSI6ImNpenN6MDg4dDAwNDAycXBhcTZ6am5yd2gifQ.pYiG9t2xSY76U3wcwFKc3g",
-    "style": "mapbox://styles/mapbox/streets-v9"
+    "style": "mapbox://styles/mapbox/streets-v9",
+    "center": [ -122.44674682617188,
+          37.74574303801687
+        ],
+    "zoom":12
+
 }

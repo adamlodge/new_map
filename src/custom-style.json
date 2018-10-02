@@ -1,4 +1,35 @@
 {
-    "sources": {},
-    "layers": []
+    "sources": {
+        "tracts": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        }
+    },
+    "layers": [
+      {
+          "id": "tracts-outline",
+          "type": "line",
+          "source": "tracts",
+          "paint": {
+              "line-color": "#383838",
+              "line-width": 3
+          }
+      },
+      {
+        "id": "tracts",
+        "type": "fill-extrusion",
+        "source": "tracts",
+        "layout": {},
+        "paint": {
+            "fill-extrusion-height": ["to-number",
+              ["get", "households"],
+              0],
+            "fill-extrusion-opacity":0.5
+
+        }
+
+    }]
 }
